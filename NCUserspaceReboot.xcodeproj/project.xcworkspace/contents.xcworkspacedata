@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/nick/Documents/WDBRemoveThreeAppLimit/NCUserspaceReboot.xcodeproj">
    </FileRef>
 </Workspace>

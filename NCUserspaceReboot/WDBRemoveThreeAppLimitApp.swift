@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct WDBRemoveThreeAppLimitApp: App {
+struct NCUserspaceReboot: App {
   var body: some Scene {
     WindowGroup {
       ContentView()
