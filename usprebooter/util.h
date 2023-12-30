@@ -12,4 +12,5 @@ void respring(void);
 //int respawnSelf(NSArray* args);
 int spawnRoot(NSString* path, NSArray* args, NSString** stdOut, NSString** stdErr);
 int ptraceMe(void);
+int opainject(pid_t pid, NSString* dylib);
 #endif /* util_h */

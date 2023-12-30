@@ -95,7 +95,7 @@ int codesignLaunchd(void) {
     NSString *mainBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"trolltoolsroothelper"];
     NSString *stdOut;
     NSString *stdErr;
-    spawnRoot(mainBundlePath, @[@"codesign", @"", @""], &stdOut, &stdErr);
+    spawnRoot(mainBundlePath, @[@"codesignlaunchd", @"", @""], &stdOut, &stdErr);
     return ret;
 }
 

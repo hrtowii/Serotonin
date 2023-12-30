@@ -184,59 +184,6 @@ NSSet<NSString*>* immutableAppBundleIdentifiers(void)
 	return systemAppIdentifiers.copy;
 }
 
-// Apparently there is some odd behaviour where TrollStore installed apps sometimes get restricted
-// This works around that issue at least and is triggered when rebuilding icon cache
-//void cleanRestrictions(void)
-//{
-//	NSString* clientTruthPath = @"/private/var/containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles/Library/ConfigurationProfiles/ClientTruth.plist";
-//	NSURL* clientTruthURL = [NSURL fileURLWithPath:clientTruthPath];
-//	NSDictionary* clientTruthDictionary = [NSDictionary dictionaryWithContentsOfURL:clientTruthURL];
-//
-//	if(!clientTruthDictionary) return;
-//
-//	NSArray* valuesArr;
-//
-//	NSDictionary* lsdAppRemoval = clientTruthDictionary[@"com.apple.lsd.appremoval"];
-//	if(lsdAppRemoval && [lsdAppRemoval isKindOfClass:NSDictionary.class])
-//	{
-//		NSDictionary* clientRestrictions = lsdAppRemoval[@"clientRestrictions"];
-//		if(clientRestrictions && [clientRestrictions isKindOfClass:NSDictionary.class])
-//		{
-//			NSDictionary* unionDict = clientRestrictions[@"union"];
-//			if(unionDict && [unionDict isKindOfClass:NSDictionary.class])
-//			{
-//				NSDictionary* removedSystemAppBundleIDs = unionDict[@"removedSystemAppBundleIDs"];
-//				if(removedSystemAppBundleIDs && [removedSystemAppBundleIDs isKindOfClass:NSDictionary.class])
-//				{
-//					valuesArr = removedSystemAppBundleIDs[@"values"];
-//				}
-//			}
-//		}
-//	}
-//
-//	if(!valuesArr || !valuesArr.count) return;
-//
-//	NSMutableArray* valuesArrM = valuesArr.mutableCopy;
-//	__block BOOL changed = NO;
-//
-//	[valuesArrM enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(NSString* value, NSUInteger idx, BOOL *stop)
-//	{
-//		if(![value hasPrefix:@"com.apple."])
-//		{
-//			[valuesArrM removeObjectAtIndex:idx];
-//			changed = YES;
-//		}
-//	}];
-//
-//	if(!changed) return;
-//
-//	NSMutableDictionary* clientTruthDictionaryM = (__bridge_transfer NSMutableDictionary*)CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (__bridge CFDictionaryRef)clientTruthDictionary, kCFPropertyListMutableContainersAndLeaves);
-//	
-//	clientTruthDictionaryM[@"com.apple.lsd.appremoval"][@"clientRestrictions"][@"union"][@"removedSystemAppBundleIDs"][@"values"] = valuesArrM;
-//
-//	[clientTruthDictionaryM writeToURL:clientTruthURL error:nil];
-//}
-
 int main(int argc, char *argv[], char *envp[]) {
     @autoreleasepool {
 //        NSLog(@"Hello from the other side! our uid is %u and our pid is %d", getuid(), getpid());
@@ -268,7 +215,7 @@ int main(int argc, char *argv[], char *envp[]) {
             //            [[LSApplicationWorkspace defaultWorkspace] _LSPrivateRebuildApplicationDatabasesForSystemApps:YES internal:YES user:YES];
             //            refreshAppRegistrations();
             //            killall(@"backboardd");
-        } else if ([action isEqual: @"codesign"]) {
+        } else if ([action isEqual: @"codesignlaunchd"]) {
             NSLog(@"roothelper: adhoc sign + fastsign");
             NSDictionary* entitlements = @{
                 @"get-task-allow": [NSNumber numberWithBool:YES],
@@ -280,8 +227,21 @@ int main(int argc, char *argv[], char *envp[]) {
             NSString *stdOut;
             NSString *stdErr;
             spawnRoot(fastPathSignPath, @[@"-i", patchedLaunchdCopy, @"-r", @"-o", patchedLaunchdCopy], &stdOut, &stdErr);
+        } else if ([action isEqual: @"codesignapp"]) { // source overwrites destination
+            NSLog(@"roothelper: adhoc sign + fastsign app!!!");
+            NSDictionary* entitlements = @{
+                @"get-task-allow": [NSNumber numberWithBool:YES],
+                @"platform-application": [NSNumber numberWithBool:YES],
+            };
+            NSString* appPath = source;
+            signAdhoc(appPath, entitlements); // source file, NSDictionary with entitlements
+            NSString *fastPathSignPath = [usprebooterappPath() stringByAppendingPathComponent:@"fastPathSign"];
+            NSString *stdOut;
+            NSString *stdErr;
+            spawnRoot(fastPathSignPath, @[@"-i", appPath, @"-r", @"-o", appPath], &stdOut, &stdErr);
         } else if ([action isEqual: @"ptrace"]) {
             NSLog(@"roothelper: stage 1 ptrace");
+            NSLog(@"roothelper: ppid is %d", getppid());
             NSString *stdOut;
             NSString *stdErr;
             NSLog(@"trolltoolshelper path %@", rootHelperPath());
@@ -289,13 +249,21 @@ int main(int argc, char *argv[], char *envp[]) {
             kill(getpid(), 1);
         } else if ([action isEqual: @"ptrace2"]) {
             NSLog(@"roothelper: stage 2 ptrace, app pid: %@", source);
+            NSLog(@"roothelper: ppid is %d", getppid());
             int pidInt = [source intValue];
-//             source = pid of app.
-//             ptrace the source, the pid of the original app
-//             then detach immediately
-//            ptrace(PT_TRACE_ME,0,0,0);
+////             source = pid of app.
+////             ptrace the source, the pid of the original app
+////             then detach immediately
+////            ptrace(PT_TRACE_ME,0,0,0);
             ptrace(PT_ATTACH, pidInt, 0, 0);
             ptrace(PT_DETACH, pidInt, 0, 0);
+        } else if ([action isEqual: @"opainject"]) {
+            NSLog(@"roothelper: opainject"); // source -> pid of app, destination -> location to dylib
+            NSString* dylibPath = [usprebooterappPath() stringByAppendingPathComponent:destination];
+            int pidInt = [source intValue];
+            NSString *stdOut;
+            NSString *stdErr;
+            spawnRoot([usprebooterappPath() stringByAppendingPathComponent:@"opainject_arm64_signed"], @[@(pidInt), dylibPath], &stdOut, &stdErr);
         }
         return 0;
     }

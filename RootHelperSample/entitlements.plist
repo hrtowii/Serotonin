@@ -8,6 +8,8 @@
 	<false/>
 	<key>com.apple.private.security.no-container</key>
 	<true/>
+    <key>com.apple.private.security.no-sandbox</key>
+    <true/>
 	<key>com.apple.private.skip-library-validation</key>
 	<true/>
 	<key>com.apple.private.xpc.domain-extension</key>
@@ -52,14 +54,33 @@
 	<true/>
     <key>get-task-allow</key>
     <true/>
+    <key>task_for_pid-allow</key>
+    <true/>
+    <key>run-unsigned-code</key>
+    <true/>
+    <key>com.apple.system-task-ports</key>
+    <true/>
     <key>com.apple.private.security.storage.AppBundles</key>
     <true/>
     <key>com.apple.private.security.storage.AppDataContainers</key>
     <true/>
+    <key>com.apple.security.iokit-user-client-class</key>
+    <true/>
+    <key>com.apple.developer.driverkit</key>
+    <true/>
+    <key>com.apple.developer.driverkit.userclient-access</key>
+    <true/>
+    <key>com.apple.security.iokit-user-client-class</key>
+    <array>
+        <string>iokit-open-user-client</string>
+        <string>IOSurfaceRootUserClient</string>
+    </array>
 	<key>com.apple.security.exception.mach-lookup.global-name</key>
 	<array>
 		<string>com.apple.mmaintenanced</string>
 		<string>com.apple.memory-maintenance</string>
 	</array>
+    <key>com.apple.private.cs.debugger</key>
+    <true/>
 </dict>
 </plist>

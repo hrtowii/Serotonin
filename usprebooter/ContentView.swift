@@ -1,6 +1,7 @@
 import SwiftUI
-
 struct ContentView: View {
+    @State private var pid: Int32 = 0
+    @State private var stringy: String = ""
     var body: some View {
         HStack {
             Button("kfdgo") {
@@ -14,11 +15,24 @@ struct ContentView: View {
 //                copyLaunchd()
 //                userspaceReboot()
             }
+            Button("ptracer") {
+                ptraceTest()
+//                copyLaunchd()
+//                userspaceReboot()
+            }
             Button("uspreboot") {
 //                fuck()
 //                copyLaunchd()
                 userspaceReboot()
             }
+            TextField(
+                    "pid",
+                    text: $stringy
+                )
+//                .focused($emailFieldIsFocused)
+                .onSubmit {
+                    opainject(pid, "test")
+                }
         }
     }
 }

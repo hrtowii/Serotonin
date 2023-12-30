@@ -15,3 +15,4 @@ void kclose_intermediate(uint64_t kfd);
 //void grant_full_disk_access(void);
 void respring(void);
 void do_fun(void);
+void ptraceTest(void);

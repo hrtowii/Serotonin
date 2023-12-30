@@ -12,7 +12,15 @@
       },
       {
         "comment": "",
+        "key": "ptracer"
+      },
+      {
+        "comment": "",
         "key": "uspreboot"
+      },
+      {
+        "comment": "",
+        "key": "pid"
       }
     ]
   },

@@ -14,6 +14,14 @@
 
 #include <sys/types.h>
 #define PT_TRACE_ME 0
+/* Attach to a process that is already running. */
+//PTRACE_ATTACH = 16,
+#define PT_ATTACH 16
+
+/* Detach from a process attached to with PTRACE_ATTACH.  */
+//PTRACE_DETACH = 17,
+#define PT_DETACH 17
+#define PT_ATTACHEXC    14    /* attach to running process with signal exception */
 int ptrace(int, pid_t, caddr_t, int);
 
 NSString *getExecutablePath(void)
@@ -148,10 +156,7 @@ int spawnRoot(NSString* path, NSArray* args, NSString** stdOut, NSString** stdEr
 }
 
 
-int respawnSelf(NSArray* args) {
-    spawnRoot(getExecutablePath(), args, nil, nil);
-    return 0;
-}
+
 void enumerateProcessesUsingBlock(void (^enumerator)(pid_t pid, NSString* executablePath, BOOL* stop))
 {
     static int maxArgumentSize = 0;
@@ -229,14 +234,29 @@ void respring(void)
 int ptraceMe(void) {
     NSString *mainBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"trolltoolsroothelper"];
     NSLog(@"ptrace: helper is %@", mainBundlePath);
+    NSLog(@"ptrace: pid is %d", getpid());
     NSString *stdOut;
     NSString *stdErr;
     ptrace(PT_TRACE_ME,0,0,0);
-    
     int myPid = getpid();
     char pidString[100];
     sprintf(pidString, "%d", myPid);
     spawnRoot(mainBundlePath, @[@"ptrace", [NSString stringWithUTF8String: pidString], @""], nil, nil);
-
+    ptrace(PT_ATTACH, getpid(), 0, 0);
+    ptrace(PT_DETACH, getpid(), 0, 0);
     return 0;
 }
+
+//#import <Foundation/Foundation.h>
+
+int opainject(pid_t pid, NSString* dylib) {
+    NSString *mainBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"trolltoolsroothelper"];
+//    NSString *dylibPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Frameworks"];
+    NSString *dylibPath = @"/var/mobile/Documents/VendettaTweakSigned";
+//    dylibPath = [dylibPath stringByAppendingPathComponent:dylib];
+    char pidString[100];
+    sprintf(pidString, "%d", pid);
+    spawnRoot(mainBundlePath, @[@"opainject", [NSString stringWithUTF8String: pidString], dylibPath], nil, nil);
+    return 0;
+}
+

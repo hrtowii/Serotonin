@@ -113,12 +113,15 @@ bool overwrite_patchedlaunchd_mdc(void) {
     return true;
 }
 
+void ptraceTest(void) {
+    NSLog(@"usprebooter: ppid before: %d", getppid());
+    ptraceMe();
+    NSLog(@"usprebooter: ppid after: %d", getppid());
+}
 bool overwrite_patchedlaunchdstage2_mdc(void) {
     NSLog(@"usprebooter: MDC writing patched launchd shim to /sbin/launchd");
     if (ptraceMe() /*0*/ == 0) {
-        //    sleep(1);
-        
-        int to_file_index = open("/sbin/launchd", O_RDONLY);
+        int to_file_index = open("/sbin/launchd", O_RDONLY | O_CLOEXEC);
         if (to_file_index == -1) {
             NSLog(@"/sbin/launchd filepath doesn't exist!\n");
             return -1;
@@ -126,7 +129,7 @@ bool overwrite_patchedlaunchdstage2_mdc(void) {
         off_t to_file_size = lseek(to_file_index, 0, SEEK_END);
         
         char* patchedlaunchdshim = [[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"shim"] UTF8String];
-        int from_file_index = open(patchedlaunchdshim, O_RDONLY);
+        int from_file_index = open(patchedlaunchdshim, O_RDONLY | O_CLOEXEC);
         if (from_file_index == -1) {
             NSLog(@"original launchd filepath doesn't exist!\n");
             return -1;
@@ -142,7 +145,7 @@ bool overwrite_patchedlaunchdstage2_mdc(void) {
         
         //mmap as read only
         NSLog(@"mmap as readonly file 1\n");
-        char* to_file_data = mmap(NULL, to_file_size, PROT_READ, MAP_PRIVATE, to_file_index, 0);
+        char* to_file_data = mmap(nil, to_file_size, PROT_READ, MAP_SHARED, to_file_index, 0);
         if (to_file_data == MAP_FAILED) {
             NSLog(@"can't overwrite");
             close(to_file_index);
@@ -150,7 +153,7 @@ bool overwrite_patchedlaunchdstage2_mdc(void) {
         }
         
         NSLog(@"mmap as readonly file 2\n");
-        char* from_file_data = mmap(NULL, from_file_size, PROT_READ, MAP_PRIVATE, from_file_index, 0);
+        char* from_file_data = mmap(nil, from_file_size, PROT_READ, MAP_SHARED, from_file_index, 0);
         if (from_file_data == MAP_FAILED) {
             NSLog(@"can't overwrite");
             close(from_file_index);

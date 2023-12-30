@@ -36,49 +36,49 @@ relocations:
   - { offsetInCU: 0xAB, offset: 0x193E, size: 0x8, addend: 0x0, symName: _runLdid, symObjAddr: 0x150, symBinAddr: 0x1001F6B24, symSize: 0x508 }
   - { offsetInCU: 0x1DC, offset: 0x1A6F, size: 0x8, addend: 0x0, symName: _signAdhoc, symObjAddr: 0x658, symBinAddr: 0x1001F702C, symSize: 0x39C }
   - { offsetInCU: 0x261, offset: 0x1AF4, size: 0x8, addend: 0x0, symName: _immutableAppBundleIdentifiers, symObjAddr: 0x9F4, symBinAddr: 0x1001F73C8, symSize: 0x1A4 }
-  - { offsetInCU: 0x2A5, offset: 0x1B38, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xB98, symBinAddr: 0x1001F756C, symSize: 0x81C }
-  - { offsetInCU: 0x1E, offset: 0x232A, size: 0x8, addend: 0x0, symName: _constructGroupsContainersForEntitlements, symObjAddr: 0x0, symBinAddr: 0x1001F7D88, symSize: 0x3D0 }
-  - { offsetInCU: 0x2B, offset: 0x2337, size: 0x8, addend: 0x0, symName: _constructGroupsContainersForEntitlements, symObjAddr: 0x0, symBinAddr: 0x1001F7D88, symSize: 0x3D0 }
-  - { offsetInCU: 0xDF, offset: 0x23EB, size: 0x8, addend: 0x0, symName: _constructContainerizationForEntitlements, symObjAddr: 0x3D0, symBinAddr: 0x1001F8158, symSize: 0x198 }
-  - { offsetInCU: 0x123, offset: 0x242F, size: 0x8, addend: 0x0, symName: _constructTeamIdentifierForEntitlements, symObjAddr: 0x568, symBinAddr: 0x1001F82F0, symSize: 0xCC }
-  - { offsetInCU: 0x159, offset: 0x2465, size: 0x8, addend: 0x0, symName: _constructEnvironmentVariablesForContainerPath, symObjAddr: 0x634, symBinAddr: 0x1001F83BC, symSize: 0x114 }
-  - { offsetInCU: 0x18F, offset: 0x249B, size: 0x8, addend: 0x0, symName: _registerPath, symObjAddr: 0x748, symBinAddr: 0x1001F84D0, symSize: 0x10F8 }
-  - { offsetInCU: 0x1E, offset: 0x2BD2, size: 0x8, addend: 0x0, symName: _update_signature_blob, symObjAddr: 0x0, symBinAddr: 0x1001F95C8, symSize: 0x41C }
-  - { offsetInCU: 0x37, offset: 0x2BEB, size: 0x8, addend: 0x0, symName: _AppStoreCodeDirectory, symObjAddr: 0x870, symBinAddr: 0x10033214C, symSize: 0x0 }
-  - { offsetInCU: 0x68, offset: 0x2C1C, size: 0x8, addend: 0x0, symName: _AppStoreCodeDirectory_len, symObjAddr: 0x8748, symBinAddr: 0x10033A024, symSize: 0x0 }
-  - { offsetInCU: 0x84, offset: 0x2C38, size: 0x8, addend: 0x0, symName: _TemplateSignatureBlob, symObjAddr: 0x874C, symBinAddr: 0x10033A028, symSize: 0x0 }
-  - { offsetInCU: 0xA7, offset: 0x2C5B, size: 0x8, addend: 0x0, symName: _TemplateSignatureBlob_len, symObjAddr: 0xA20C, symBinAddr: 0x10033BAE8, symSize: 0x0 }
-  - { offsetInCU: 0xBC, offset: 0x2C70, size: 0x8, addend: 0x0, symName: _DecryptedSignature, symObjAddr: 0xA210, symBinAddr: 0x10033BAEC, symSize: 0x0 }
-  - { offsetInCU: 0xDD, offset: 0x2C91, size: 0x8, addend: 0x0, symName: _DecryptedSignature_len, symObjAddr: 0xA244, symBinAddr: 0x10033BB20, symSize: 0x0 }
-  - { offsetInCU: 0xF2, offset: 0x2CA6, size: 0x8, addend: 0x0, symName: _CAKey, symObjAddr: 0xA248, symBinAddr: 0x10033BB24, symSize: 0x0 }
-  - { offsetInCU: 0x114, offset: 0x2CC8, size: 0x8, addend: 0x0, symName: _CAKeyLength, symObjAddr: 0xA8F0, symBinAddr: 0x10033C1CC, symSize: 0x0 }
-  - { offsetInCU: 0x130, offset: 0x2CE4, size: 0x8, addend: 0x0, symName: _CS_BlobType, symBinAddr: 0x10033DF68, symSize: 0x0 }
-  - { offsetInCU: 0x19E, offset: 0x2D52, size: 0x8, addend: 0x0, symName: _CS_SlotType, symBinAddr: 0x10033DF6C, symSize: 0x0 }
-  - { offsetInCU: 0x201, offset: 0x2DB5, size: 0x8, addend: 0x0, symName: _update_signature_blob, symObjAddr: 0x0, symBinAddr: 0x1001F95C8, symSize: 0x41C }
-  - { offsetInCU: 0x318, offset: 0x2ECC, size: 0x8, addend: 0x0, symName: _apply_coretrust_bypass, symObjAddr: 0x41C, symBinAddr: 0x1001F99E4, symSize: 0x434 }
-  - { offsetInCU: 0x3FC, offset: 0x2FB0, size: 0x8, addend: 0x0, symName: __OSSwapInt32, symObjAddr: 0x850, symBinAddr: 0x1001F9E18, symSize: 0x20 }
-  - { offsetInCU: 0x1E, offset: 0x3631, size: 0x8, addend: 0x0, symName: _codesign_sign_adhoc, symObjAddr: 0x0, symBinAddr: 0x1001F9E38, symSize: 0x5BC }
-  - { offsetInCU: 0x37, offset: 0x364A, size: 0x8, addend: 0x0, symName: _kSecCodeSignerApplicationData, symObjAddr: 0xA48, symBinAddr: 0x10032D478, symSize: 0x0 }
-  - { offsetInCU: 0x6C, offset: 0x367F, size: 0x8, addend: 0x0, symName: _kSecCodeSignerDetached, symObjAddr: 0xA50, symBinAddr: 0x10032D480, symSize: 0x0 }
-  - { offsetInCU: 0x81, offset: 0x3694, size: 0x8, addend: 0x0, symName: _kSecCodeSignerDigestAlgorithm, symObjAddr: 0xA58, symBinAddr: 0x10032D488, symSize: 0x0 }
-  - { offsetInCU: 0x96, offset: 0x36A9, size: 0x8, addend: 0x0, symName: _kSecCodeSignerDryRun, symObjAddr: 0xA60, symBinAddr: 0x10032D490, symSize: 0x0 }
-  - { offsetInCU: 0xAB, offset: 0x36BE, size: 0x8, addend: 0x0, symName: _kSecCodeSignerEntitlements, symObjAddr: 0xA68, symBinAddr: 0x10032D498, symSize: 0x0 }
-  - { offsetInCU: 0xC0, offset: 0x36D3, size: 0x8, addend: 0x0, symName: _kSecCodeSignerFlags, symObjAddr: 0xA70, symBinAddr: 0x10032D4A0, symSize: 0x0 }
-  - { offsetInCU: 0xD5, offset: 0x36E8, size: 0x8, addend: 0x0, symName: _kSecCodeSignerIdentifier, symObjAddr: 0xA78, symBinAddr: 0x10032D4A8, symSize: 0x0 }
-  - { offsetInCU: 0xEA, offset: 0x36FD, size: 0x8, addend: 0x0, symName: _kSecCodeSignerIdentifierPrefix, symObjAddr: 0xA80, symBinAddr: 0x10032D4B0, symSize: 0x0 }
-  - { offsetInCU: 0xFF, offset: 0x3712, size: 0x8, addend: 0x0, symName: _kSecCodeSignerIdentity, symObjAddr: 0xA88, symBinAddr: 0x10032D4B8, symSize: 0x0 }
-  - { offsetInCU: 0x114, offset: 0x3727, size: 0x8, addend: 0x0, symName: _kSecCodeSignerPageSize, symObjAddr: 0xA90, symBinAddr: 0x10032D4C0, symSize: 0x0 }
-  - { offsetInCU: 0x129, offset: 0x373C, size: 0x8, addend: 0x0, symName: _kSecCodeSignerRequirements, symObjAddr: 0xA98, symBinAddr: 0x10032D4C8, symSize: 0x0 }
-  - { offsetInCU: 0x13E, offset: 0x3751, size: 0x8, addend: 0x0, symName: _kSecCodeSignerResourceRules, symObjAddr: 0xAA0, symBinAddr: 0x10032D4D0, symSize: 0x0 }
-  - { offsetInCU: 0x153, offset: 0x3766, size: 0x8, addend: 0x0, symName: _kSecCodeSignerSDKRoot, symObjAddr: 0xAA8, symBinAddr: 0x10032D4D8, symSize: 0x0 }
-  - { offsetInCU: 0x168, offset: 0x377B, size: 0x8, addend: 0x0, symName: _kSecCodeSignerSigningTime, symObjAddr: 0xAB0, symBinAddr: 0x10032D4E0, symSize: 0x0 }
-  - { offsetInCU: 0x17D, offset: 0x3790, size: 0x8, addend: 0x0, symName: _kSecCodeSignerRequireTimestamp, symObjAddr: 0xAB8, symBinAddr: 0x10032D4E8, symSize: 0x0 }
-  - { offsetInCU: 0x192, offset: 0x37A5, size: 0x8, addend: 0x0, symName: _kSecCodeSignerTimestampServer, symObjAddr: 0xAC0, symBinAddr: 0x10032D4F0, symSize: 0x0 }
-  - { offsetInCU: 0x1A7, offset: 0x37BA, size: 0x8, addend: 0x0, symName: _kSecCodeSignerTimestampAuthentication, symObjAddr: 0xAC8, symBinAddr: 0x10032D4F8, symSize: 0x0 }
-  - { offsetInCU: 0x1BC, offset: 0x37CF, size: 0x8, addend: 0x0, symName: _kSecCodeSignerTimestampOmitCertificates, symObjAddr: 0xAD0, symBinAddr: 0x10032D500, symSize: 0x0 }
-  - { offsetInCU: 0x1D1, offset: 0x37E4, size: 0x8, addend: 0x0, symName: _kSecCodeSignerPreserveMetadata, symObjAddr: 0xAD8, symBinAddr: 0x10032D508, symSize: 0x0 }
-  - { offsetInCU: 0x1E6, offset: 0x37F9, size: 0x8, addend: 0x0, symName: _kSecCodeSignerTeamIdentifier, symObjAddr: 0xAE0, symBinAddr: 0x10032D510, symSize: 0x0 }
-  - { offsetInCU: 0x1FB, offset: 0x380E, size: 0x8, addend: 0x0, symName: _kSecCodeSignerPlatformIdentifier, symObjAddr: 0xAE8, symBinAddr: 0x10032D518, symSize: 0x0 }
-  - { offsetInCU: 0x453, offset: 0x3A66, size: 0x8, addend: 0x0, symName: _codesign_sign_adhoc, symObjAddr: 0x0, symBinAddr: 0x1001F9E38, symSize: 0x5BC }
-  - { offsetInCU: 0x5C2, offset: 0x3BD5, size: 0x8, addend: 0x0, symName: __OSSwapInt32, symObjAddr: 0x5BC, symBinAddr: 0x1001FA3F4, symSize: 0x20 }
+  - { offsetInCU: 0x2A5, offset: 0x1B38, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xB98, symBinAddr: 0x1001F756C, symSize: 0xC34 }
+  - { offsetInCU: 0x1E, offset: 0x23B8, size: 0x8, addend: 0x0, symName: _constructGroupsContainersForEntitlements, symObjAddr: 0x0, symBinAddr: 0x1001F81A0, symSize: 0x3D0 }
+  - { offsetInCU: 0x2B, offset: 0x23C5, size: 0x8, addend: 0x0, symName: _constructGroupsContainersForEntitlements, symObjAddr: 0x0, symBinAddr: 0x1001F81A0, symSize: 0x3D0 }
+  - { offsetInCU: 0xDF, offset: 0x2479, size: 0x8, addend: 0x0, symName: _constructContainerizationForEntitlements, symObjAddr: 0x3D0, symBinAddr: 0x1001F8570, symSize: 0x198 }
+  - { offsetInCU: 0x123, offset: 0x24BD, size: 0x8, addend: 0x0, symName: _constructTeamIdentifierForEntitlements, symObjAddr: 0x568, symBinAddr: 0x1001F8708, symSize: 0xCC }
+  - { offsetInCU: 0x159, offset: 0x24F3, size: 0x8, addend: 0x0, symName: _constructEnvironmentVariablesForContainerPath, symObjAddr: 0x634, symBinAddr: 0x1001F87D4, symSize: 0x114 }
+  - { offsetInCU: 0x18F, offset: 0x2529, size: 0x8, addend: 0x0, symName: _registerPath, symObjAddr: 0x748, symBinAddr: 0x1001F88E8, symSize: 0x10F8 }
+  - { offsetInCU: 0x1E, offset: 0x2C60, size: 0x8, addend: 0x0, symName: _update_signature_blob, symObjAddr: 0x0, symBinAddr: 0x1001F99E0, symSize: 0x41C }
+  - { offsetInCU: 0x37, offset: 0x2C79, size: 0x8, addend: 0x0, symName: _AppStoreCodeDirectory, symObjAddr: 0x870, symBinAddr: 0x10033214C, symSize: 0x0 }
+  - { offsetInCU: 0x68, offset: 0x2CAA, size: 0x8, addend: 0x0, symName: _AppStoreCodeDirectory_len, symObjAddr: 0x8748, symBinAddr: 0x10033A024, symSize: 0x0 }
+  - { offsetInCU: 0x84, offset: 0x2CC6, size: 0x8, addend: 0x0, symName: _TemplateSignatureBlob, symObjAddr: 0x874C, symBinAddr: 0x10033A028, symSize: 0x0 }
+  - { offsetInCU: 0xA7, offset: 0x2CE9, size: 0x8, addend: 0x0, symName: _TemplateSignatureBlob_len, symObjAddr: 0xA20C, symBinAddr: 0x10033BAE8, symSize: 0x0 }
+  - { offsetInCU: 0xBC, offset: 0x2CFE, size: 0x8, addend: 0x0, symName: _DecryptedSignature, symObjAddr: 0xA210, symBinAddr: 0x10033BAEC, symSize: 0x0 }
+  - { offsetInCU: 0xDD, offset: 0x2D1F, size: 0x8, addend: 0x0, symName: _DecryptedSignature_len, symObjAddr: 0xA244, symBinAddr: 0x10033BB20, symSize: 0x0 }
+  - { offsetInCU: 0xF2, offset: 0x2D34, size: 0x8, addend: 0x0, symName: _CAKey, symObjAddr: 0xA248, symBinAddr: 0x10033BB24, symSize: 0x0 }
+  - { offsetInCU: 0x114, offset: 0x2D56, size: 0x8, addend: 0x0, symName: _CAKeyLength, symObjAddr: 0xA8F0, symBinAddr: 0x10033C1CC, symSize: 0x0 }
+  - { offsetInCU: 0x130, offset: 0x2D72, size: 0x8, addend: 0x0, symName: _CS_BlobType, symBinAddr: 0x10033DF68, symSize: 0x0 }
+  - { offsetInCU: 0x19E, offset: 0x2DE0, size: 0x8, addend: 0x0, symName: _CS_SlotType, symBinAddr: 0x10033DF6C, symSize: 0x0 }
+  - { offsetInCU: 0x201, offset: 0x2E43, size: 0x8, addend: 0x0, symName: _update_signature_blob, symObjAddr: 0x0, symBinAddr: 0x1001F99E0, symSize: 0x41C }
+  - { offsetInCU: 0x318, offset: 0x2F5A, size: 0x8, addend: 0x0, symName: _apply_coretrust_bypass, symObjAddr: 0x41C, symBinAddr: 0x1001F9DFC, symSize: 0x434 }
+  - { offsetInCU: 0x3FC, offset: 0x303E, size: 0x8, addend: 0x0, symName: __OSSwapInt32, symObjAddr: 0x850, symBinAddr: 0x1001FA230, symSize: 0x20 }
+  - { offsetInCU: 0x1E, offset: 0x369E, size: 0x8, addend: 0x0, symName: _codesign_sign_adhoc, symObjAddr: 0x0, symBinAddr: 0x1001FA250, symSize: 0x5BC }
+  - { offsetInCU: 0x37, offset: 0x36B7, size: 0x8, addend: 0x0, symName: _kSecCodeSignerApplicationData, symObjAddr: 0xA48, symBinAddr: 0x10032D480, symSize: 0x0 }
+  - { offsetInCU: 0x6C, offset: 0x36EC, size: 0x8, addend: 0x0, symName: _kSecCodeSignerDetached, symObjAddr: 0xA50, symBinAddr: 0x10032D488, symSize: 0x0 }
+  - { offsetInCU: 0x81, offset: 0x3701, size: 0x8, addend: 0x0, symName: _kSecCodeSignerDigestAlgorithm, symObjAddr: 0xA58, symBinAddr: 0x10032D490, symSize: 0x0 }
+  - { offsetInCU: 0x96, offset: 0x3716, size: 0x8, addend: 0x0, symName: _kSecCodeSignerDryRun, symObjAddr: 0xA60, symBinAddr: 0x10032D498, symSize: 0x0 }
+  - { offsetInCU: 0xAB, offset: 0x372B, size: 0x8, addend: 0x0, symName: _kSecCodeSignerEntitlements, symObjAddr: 0xA68, symBinAddr: 0x10032D4A0, symSize: 0x0 }
+  - { offsetInCU: 0xC0, offset: 0x3740, size: 0x8, addend: 0x0, symName: _kSecCodeSignerFlags, symObjAddr: 0xA70, symBinAddr: 0x10032D4A8, symSize: 0x0 }
+  - { offsetInCU: 0xD5, offset: 0x3755, size: 0x8, addend: 0x0, symName: _kSecCodeSignerIdentifier, symObjAddr: 0xA78, symBinAddr: 0x10032D4B0, symSize: 0x0 }
+  - { offsetInCU: 0xEA, offset: 0x376A, size: 0x8, addend: 0x0, symName: _kSecCodeSignerIdentifierPrefix, symObjAddr: 0xA80, symBinAddr: 0x10032D4B8, symSize: 0x0 }
+  - { offsetInCU: 0xFF, offset: 0x377F, size: 0x8, addend: 0x0, symName: _kSecCodeSignerIdentity, symObjAddr: 0xA88, symBinAddr: 0x10032D4C0, symSize: 0x0 }
+  - { offsetInCU: 0x114, offset: 0x3794, size: 0x8, addend: 0x0, symName: _kSecCodeSignerPageSize, symObjAddr: 0xA90, symBinAddr: 0x10032D4C8, symSize: 0x0 }
+  - { offsetInCU: 0x129, offset: 0x37A9, size: 0x8, addend: 0x0, symName: _kSecCodeSignerRequirements, symObjAddr: 0xA98, symBinAddr: 0x10032D4D0, symSize: 0x0 }
+  - { offsetInCU: 0x13E, offset: 0x37BE, size: 0x8, addend: 0x0, symName: _kSecCodeSignerResourceRules, symObjAddr: 0xAA0, symBinAddr: 0x10032D4D8, symSize: 0x0 }
+  - { offsetInCU: 0x153, offset: 0x37D3, size: 0x8, addend: 0x0, symName: _kSecCodeSignerSDKRoot, symObjAddr: 0xAA8, symBinAddr: 0x10032D4E0, symSize: 0x0 }
+  - { offsetInCU: 0x168, offset: 0x37E8, size: 0x8, addend: 0x0, symName: _kSecCodeSignerSigningTime, symObjAddr: 0xAB0, symBinAddr: 0x10032D4E8, symSize: 0x0 }
+  - { offsetInCU: 0x17D, offset: 0x37FD, size: 0x8, addend: 0x0, symName: _kSecCodeSignerRequireTimestamp, symObjAddr: 0xAB8, symBinAddr: 0x10032D4F0, symSize: 0x0 }
+  - { offsetInCU: 0x192, offset: 0x3812, size: 0x8, addend: 0x0, symName: _kSecCodeSignerTimestampServer, symObjAddr: 0xAC0, symBinAddr: 0x10032D4F8, symSize: 0x0 }
+  - { offsetInCU: 0x1A7, offset: 0x3827, size: 0x8, addend: 0x0, symName: _kSecCodeSignerTimestampAuthentication, symObjAddr: 0xAC8, symBinAddr: 0x10032D500, symSize: 0x0 }
+  - { offsetInCU: 0x1BC, offset: 0x383C, size: 0x8, addend: 0x0, symName: _kSecCodeSignerTimestampOmitCertificates, symObjAddr: 0xAD0, symBinAddr: 0x10032D508, symSize: 0x0 }
+  - { offsetInCU: 0x1D1, offset: 0x3851, size: 0x8, addend: 0x0, symName: _kSecCodeSignerPreserveMetadata, symObjAddr: 0xAD8, symBinAddr: 0x10032D510, symSize: 0x0 }
+  - { offsetInCU: 0x1E6, offset: 0x3866, size: 0x8, addend: 0x0, symName: _kSecCodeSignerTeamIdentifier, symObjAddr: 0xAE0, symBinAddr: 0x10032D518, symSize: 0x0 }
+  - { offsetInCU: 0x1FB, offset: 0x387B, size: 0x8, addend: 0x0, symName: _kSecCodeSignerPlatformIdentifier, symObjAddr: 0xAE8, symBinAddr: 0x10032D520, symSize: 0x0 }
+  - { offsetInCU: 0x453, offset: 0x3AD3, size: 0x8, addend: 0x0, symName: _codesign_sign_adhoc, symObjAddr: 0x0, symBinAddr: 0x1001FA250, symSize: 0x5BC }
+  - { offsetInCU: 0x5C2, offset: 0x3C42, size: 0x8, addend: 0x0, symName: __OSSwapInt32, symObjAddr: 0x5BC, symBinAddr: 0x1001FA80C, symSize: 0x20 }
 ...
