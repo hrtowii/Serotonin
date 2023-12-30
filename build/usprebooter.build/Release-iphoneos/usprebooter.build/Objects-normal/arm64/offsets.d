@@ -1,2 +1,2 @@
-dependencies: /Users/ibarahime/usprebooter/usprebooter/fun/offsets.m \
-  /Users/ibarahime/usprebooter/usprebooter/fun/offsets.h
+dependencies: /Users/haxi0/Xcode/usprebooter/usprebooter/fun/offsets.m \
+  /Users/haxi0/Xcode/usprebooter/usprebooter/fun/offsets.h

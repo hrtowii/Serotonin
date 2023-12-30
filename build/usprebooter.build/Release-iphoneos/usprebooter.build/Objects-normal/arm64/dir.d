@@ -1,3 +1,3 @@
-dependencies: /Users/ibarahime/usprebooter/usprebooter/fun/dir.m \
-  /Users/ibarahime/usprebooter/usprebooter/fun/vnode.h \
-  /Users/ibarahime/usprebooter/usprebooter/fun/utils.h
+dependencies: /Users/haxi0/Xcode/usprebooter/usprebooter/fun/dir.m \
+  /Users/haxi0/Xcode/usprebooter/usprebooter/fun/vnode.h \
+  /Users/haxi0/Xcode/usprebooter/usprebooter/fun/utils.h

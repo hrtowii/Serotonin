@@ -1,5 +1,5 @@
-dependencies: /Users/ibarahime/usprebooter/usprebooter/fun/proc.c \
-  /Users/ibarahime/usprebooter/usprebooter/fun/proc.h \
-  /Users/ibarahime/usprebooter/usprebooter/fun/offsets.h \
-  /Users/ibarahime/usprebooter/usprebooter/fun/krw.h \
-  /Users/ibarahime/usprebooter/usprebooter/fun/fun.h
+dependencies: /Users/haxi0/Xcode/usprebooter/usprebooter/fun/proc.c \
+  /Users/haxi0/Xcode/usprebooter/usprebooter/fun/proc.h \
+  /Users/haxi0/Xcode/usprebooter/usprebooter/fun/offsets.h \
+  /Users/haxi0/Xcode/usprebooter/usprebooter/fun/krw.h \
+  /Users/haxi0/Xcode/usprebooter/usprebooter/fun/fun.h

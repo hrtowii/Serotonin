@@ -1,2 +1,2 @@
-dependencies: /Users/ibarahime/usprebooter/usprebooter/util.m \
-  /Users/ibarahime/usprebooter/usprebooter/util.h
+dependencies: /Users/haxi0/Xcode/usprebooter/usprebooter/util.m \
+  /Users/haxi0/Xcode/usprebooter/usprebooter/util.h

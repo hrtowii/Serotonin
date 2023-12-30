@@ -9,7 +9,7 @@
       "guid" : "2a16c2197db7ace16980b0b06c0a5a8681e6f231dedc13ad65d64cc138acc92f"
     }
   ],
-  "containerPath" : "/Users/ibarahime/usprebooter/usprebooter.xcodeproj",
+  "containerPath" : "/Users/haxi0/Xcode/usprebooter/usprebooter.xcodeproj",
   "continueBuildingAfterErrors" : false,
   "enableIndexBuildArena" : false,
   "hideShellScriptEnvironment" : false,
@@ -22,14 +22,14 @@
           "CODE_SIGN_IDENTITY" : "",
           "CODE_SIGNING_ALLOWED" : "NO",
           "CODE_SIGNING_REQUIRED" : "NO",
-          "SDKROOT" : "iphoneos17.0"
+          "SDKROOT" : "iphoneos17.2"
         }
       },
       "synthesized" : {
         "table" : {
           "ACTION" : "build",
           "COLOR_DIAGNOSTICS" : "YES",
-          "diagnostic_message_length" : "119",
+          "diagnostic_message_length" : "110",
           "ENABLE_PREVIEWS" : "NO",
           "ENABLE_XOJIT_PREVIEWS" : "NO"
         }
