@@ -19,7 +19,7 @@ To use this app, you need to be on a supported version (mentioned above), and ha
 
    
 ## How was this done? 
- - It replaces launchd by searching through /sbin's vp_namecache, finds launchd's name cache and kwrites it with a patch to `lunchd`, our patched `launchd` (*you can have a look at a better explanation from AlfieCG [here](https://www.reddit.com/r/jailbreak/comments/18zehl2/comment/kgi5ya3/)*)
+ - It replaces launchd by searching through /sbin's vp_namecache, finds launchd's name cache and kwrites it with a patch to `launchd`, our patched `launchd` (*you can have a look at a better explanation from AlfieCG [here](https://www.reddit.com/r/jailbreak/comments/18zehl2/comment/kgi5ya3/)*)
  - Patched launchd hooks posix_spawnp of SpringBoard and execs our own SpringBoard with springboardhook.dylib
  - Springboardhook loads in tweaks, ellekit, etc.
  - CoreTrust Bug found by [AlfieCG](https://github.com/alfiecg24)
