@@ -1,3 +1,7 @@
+# This repository's code is now unmaintained and is merged into [the new Serotonin fork with Mineek](https://github.com/mineek/Serotonin)
+
+
+
 <div align="center">
 <img src="https://raw.githubusercontent.com/hrtowii/Serotonin/A12restart/artwork/serotonin-precomposed.png" height="128" width="128" style="border-radius:25%">
    <h1> Serotonin 
